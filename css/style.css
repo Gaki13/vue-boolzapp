@@ -175,4 +175,21 @@ aside{
 .chat-typing-area{
     height: 80px;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.chat-input{
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.chat-typing-area i{
+    color: #6b7376;
+    font-size: 28px;
+    padding: 0 40px;
 }
