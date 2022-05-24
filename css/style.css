@@ -1,0 +1,33 @@
+/*--------------
+    RESET
+---------------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*--------------
+    COMMONS
+---------------*/
+
+/*--------------
+    MAIN
+---------------*/
+body{
+    height: 100vh;
+    background: linear-gradient(
+        #009688 0%, 
+        #009688 15%,
+        #DBDBD2 15%,
+        #DBDBD2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 1800px;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+}
