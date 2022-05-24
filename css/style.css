@@ -77,3 +77,29 @@ aside{
     display: flex;
     align-items: center;
 }
+
+.notifications{
+    height: 80px;
+    background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.notifications p{
+    padding: 0 5px;
+}
+
+.notifications a{
+    color: #4f7485;
+}
+
+.notifications i{
+    color: #8EDAFC;
+    background-color: #fff;
+    font-size: 23px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
