@@ -170,7 +170,10 @@ aside{
 .main-chat{
     background-image: url(../img/mine.jpg);
     flex-grow: 1;
+    padding: 50px;
+    overflow-y: auto;
 }
+
 
 .chat-typing-area{
     height: 80px;
@@ -192,4 +195,20 @@ aside{
     color: #6b7376;
     font-size: 28px;
     padding: 0 40px;
+}
+
+.green-message, .white-message{
+    display: flex;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.green-message{
+    background-color: #d5f9ba;
+    justify-content: flex-end;
+}
+
+.white-message{
+    background-color: #fff;
 }
