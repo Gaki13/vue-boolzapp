@@ -31,7 +31,7 @@ body{
 .icons-header {
     font-size: 22px;
     color: #b1b1b1;
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
 }
@@ -70,10 +70,11 @@ aside{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 15px;
 }
 
 .user-info{
-    width: 45%;
+    width: 50%;
     display: flex;
     align-items: center;
 }
@@ -128,7 +129,7 @@ aside{
     padding: 0 15px;
 }
 
-.contact-list{
+.contacts-list{
     overflow-y: auto;
 }
 
@@ -155,4 +156,11 @@ aside{
 
 .name-contact span{
     color: #b6b9bb;
+}
+
+/*main container*/
+.header-main{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
 }
