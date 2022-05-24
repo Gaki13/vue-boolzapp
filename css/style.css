@@ -41,7 +41,7 @@ body{
 }
 
 .avatar-img{
-    height: 50px;
+    height: 60px;
     border-radius: 50%;
 }
 /*--------------
@@ -118,11 +118,41 @@ aside{
 }
 .search i{
     color: #b6b9bb;
-    padding: 0 20px;
+    padding: 0 40px;
     font-size: 19px;
 }
 .search-input{
     height: 40px;
     border: 1px solid #f5f5f5;
     flex-grow: 1;
+    padding: 0 15px;
+}
+
+.contact-list{
+    overflow-y: auto;
+}
+
+.contact{
+    height: 90px;
+    border: 1px solid #f5f5f5;
+    display: flex;
+    padding: 15px;
+}
+
+.contact img {
+   align-items: center; 
+}
+
+.hour{
+    font-size: 13px;
+    color: #b6b9bb;
+}
+.name-contact{
+    flex-grow: 1;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.name-contact span{
+    color: #b6b9bb;
 }

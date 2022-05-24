@@ -41,7 +41,14 @@
                 </div>
                 <!-- elenco dei contatti -->
                 <div class="contacts-list">
-
+                    <div class="contact" v-for="contact in contacts">
+                        <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
+                        <div class="name-contact">
+                            <h2>{{contact.name}}</h2>
+                            <span>Ultimo messaggio inviato</span>   
+                        </div> 
+                        <span class="hour">12:00</span>
+                    </div>
                 </div>
             </aside>
             <!-- main container -->
@@ -52,7 +59,7 @@
             </div>
         </div>
         <!-- link vuejs -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <!-- link javascript -->
         <script src="js/contacts.js"></script>
     </body>
