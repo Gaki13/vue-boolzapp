@@ -202,11 +202,12 @@ aside{
     padding: 25px;
     border-radius: 5px;
     margin: 15px;
+    width: fit-content;
 }
 
 .green-message{
     background-color: #d5f9ba;
-    justify-content: flex-end;
+    margin-left: auto;
 }
 
 .white-message{
