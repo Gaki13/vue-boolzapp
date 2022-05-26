@@ -174,6 +174,11 @@ const app = new Vue(
             console.log (Datetime);
             const mess = contact.messages[contact.messages.length - 1];
             return Datetime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
+        },
+
+        getLastMessage(index) {
+            return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
         }
+        
     },
 });

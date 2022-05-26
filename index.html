@@ -47,7 +47,7 @@
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
                         <div class="name-contact">
                             <h2>{{contact.name}}</h2>
-                            <span>{{contacts.message}}</span>   
+                            <span>{{getLastMessage(index)}} </span>   
                         </div> 
                         <span class="hour">{{getLastMessageHour(contact)}}</span>
                     </div>
