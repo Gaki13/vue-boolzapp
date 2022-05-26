@@ -209,12 +209,12 @@ aside{
     background-color: #fff;
 }
 
-.green-message{
+.sent{
     background-color: #d5f9ba;
     margin-left: auto;
 }
 
-.white-message{
+.received{
     background-color: #fff;
 }
 

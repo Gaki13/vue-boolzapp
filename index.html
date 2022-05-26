@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- link fontawesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- link luxon -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
     </head>
     <body>
         <!-- sezione main -->
@@ -41,21 +43,21 @@
                 </div>
                 <!-- elenco dei contatti -->
                 <div class="contacts-list">
-                    <div class="contact" v-for="(contact, index) in contacts" @click="selectContact(index)">
+                    <div class="contact" v-for="(contact, index) in contacts" @click="currentIndex = index">
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
                         <div class="name-contact">
                             <h2>{{contact.name}}</h2>
                             <span>Ultimo messaggio inviato</span>   
                         </div> 
-                        <span class="hour">12:00</span>
+                        <span class="hour"></span>
                     </div>
                 </div>
             </aside>
             <!-- main container -->
             <div class="chat-container">
                 <div class="header-main" >
-                    <div class="user-info">
-                        <img src="img/avatar_1.jpg" alt="avatar profilo" class="avatar-img">
+                    <div class="user-info" >
+                        <img :src="'img/avatar' + contacts[currentIndex].avatar + '.jpg'"  class="avatar-img">
                         <div class="name-contact">
                             <h2>{{contacts[currentIndex].name}}</h2>
                             <span>Ultimo accesso oggi alle 12:00</span>   
@@ -69,7 +71,7 @@
                 </div>
                 <!-- sezione principale della chat -->
                 <div class="main-chat">
-                    <div class="message" v-for="message in contacts[currentIndex].messages">
+                    <div class="message" v-for="message in contacts[currentIndex].messages" :class="message.status">
                         <p class="text">{{message}}</p>
                         <div class="hour"></div>
                     </div>

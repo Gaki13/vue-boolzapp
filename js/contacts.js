@@ -4,7 +4,7 @@ const app = new Vue(
     {
     el: '#app',
     data: {
-        currentIndex: 0.,
+        currentIndex: 0,
         contacts: [
         {
             name: 'Michele',
@@ -171,9 +171,11 @@ const app = new Vue(
     },
 
     methods: {
-        selectContact(index){
-            this.currentIndex ==index;
-            console.log(this.currentIndex);
+        getLastMessageHour(contact) {
+            const Datetime = luxon.Datetime;
+            const mess = contact.messages[contact.messages.lenght - 1];
+
+            return Datetime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         }
     },
 });
