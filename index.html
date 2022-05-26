@@ -47,7 +47,7 @@
                         <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
                         <div class="name-contact">
                             <h2>{{contact.name}}</h2>
-                            <span>Ultimo messaggio inviato</span>   
+                            <span>{{contacts.message}}</span>   
                         </div> 
                         <span class="hour"></span>
                     </div>
@@ -72,7 +72,7 @@
                 <!-- sezione principale della chat -->
                 <div class="main-chat">
                     <div class="message" v-for="message in contacts[currentIndex].messages" :class="message.status">
-                        <p class="text">{{message}}</p>
+                        <p class="text">{{message.message}}</p>
                         <div class="hour"></div>
                     </div>
                 </div>
