@@ -1,5 +1,3 @@
-
-
 const app = new Vue(
     {
     el: '#app',
@@ -172,8 +170,9 @@ const app = new Vue(
 
     methods: {
         getLastMessageHour(contact) {
-            const Datetime = luxon.Datetime;
-            const mess = contact.messages[contact.messages.lenght - 1];
+            const Datetime = luxon.DateTime;
+            console.log (Datetime);
+            const mess = contact.messages[contact.messages.length - 1];
             return Datetime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm');
         }
     },

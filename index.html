@@ -73,7 +73,7 @@
                 <div class="main-chat">
                     <div class="message" v-for="message in contacts[currentIndex].messages" :class="message.status">
                         <p class="text">{{message.message}}</p>
-                        <div class="hour"></div>
+                        <div class="hour">{{message.date.substr(11, 5)}}</div>
                     </div>
                 </div>
                 <!-- sezione per scrittura del messaggio -->
