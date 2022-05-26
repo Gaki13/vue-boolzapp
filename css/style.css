@@ -140,6 +140,7 @@ aside{
     border: 1px solid #f5f5f5;
     display: flex;
     padding: 15px;
+    transition: background-color;
 }
 
 .contact img {
@@ -200,11 +201,12 @@ aside{
     padding: 0 40px;
 }
 
-.green-message, .white-message{
+.message{
     display: flex;
     border-radius: 10px;
     margin: 15px;
     width: fit-content;
+    background-color: #fff;
 }
 
 .green-message{
@@ -218,4 +220,11 @@ aside{
 
 .text{
     padding: 20px;
+}
+
+/*--------------
+    EFFECTS
+---------------*/
+.contact:hover{
+    background-color: #e9ebeb;
 }

@@ -4,7 +4,8 @@ const app = new Vue(
     {
     el: '#app',
     data: {
-            contacts: [
+        currentIndex: 0.,
+        contacts: [
         {
             name: 'Michele',
             avatar: '_1',
@@ -167,5 +168,12 @@ const app = new Vue(
             ],
         }
         ]
-    }
+    },
+
+    methods: {
+        selectContact(index){
+            this.currentIndex ==index;
+            console.log(this.currentIndex);
+        }
+    },
 });
