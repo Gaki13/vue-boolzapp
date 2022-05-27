@@ -79,7 +79,9 @@
                 <!-- sezione per scrittura del messaggio -->
                 <div class="chat-typing-area">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messagio" class="chat-input">
+                    <form @submit.prevent="addMessage">
+                        <input type="text" placeholder="Scrivi un messagio " class="chat-input" v-model="newMessage" @keyUp>
+                    </form>                  
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>

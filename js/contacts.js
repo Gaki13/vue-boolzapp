@@ -165,7 +165,8 @@ const app = new Vue(
                 }
             ],
         }
-        ]
+        ],
+        newMessage: '',
     },
 
     methods: {
@@ -178,7 +179,19 @@ const app = new Vue(
 
         getLastMessage(index) {
             return this.contacts[index].messages[this.contacts[index].messages.length - 1].message;
-        }
+        },
+
+        addMessage() {
+            const Datetime = luxon.DateTime;
+            const newMessage = {
+                date: Datetime.now().toFormat("dd/MM/yyyy HH:mm:ss"),
+                message: this.newMessage,
+                status: 'sent'
+            }
+
+            this.contacts[this.currentIndex].messages.push(newMessage);
+            this.newMessage = '';
+        },
         
     },
 });
