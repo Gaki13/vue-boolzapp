@@ -80,7 +80,7 @@
                 <div class="chat-typing-area">
                     <i class="fa-regular fa-face-smile"></i>
                     <form @submit.prevent="addMessage">
-                        <input type="text" placeholder="Scrivi un messagio " class="chat-input" v-model="newMessage" @keyUp>
+                        <input type="text" placeholder="Scrivi un messagio " class="chat-input" v-model="newMessage" required pattern=".*\S+.*">
                     </form>                  
                     <i class="fa-solid fa-microphone"></i>
                 </div>

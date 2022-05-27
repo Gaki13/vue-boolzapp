@@ -191,7 +191,19 @@ const app = new Vue(
 
             this.contacts[this.currentIndex].messages.push(newMessage);
             this.newMessage = '';
+            this.cpuMessage();
         },
         
+        cpuMessage() {
+            const Datetime = luxon.DateTime;
+            setTimeout(() => {
+                const newMessage = {
+                    date: Datetime.now().toFormat("dd/MM/yyyy HH:mm:ss"),
+                    message: 'Ok',
+                    status: 'received'
+                }
+                this.contacts[this.currentIndex].messages.push(newMessage);
+            }, 1000)
+        },
     },
 });
