@@ -167,6 +167,18 @@ const app = new Vue(
         }
         ],
         newMessage: '',
+        filterUser: '',
+    },
+
+    computed: {
+      filteredContacts: function(){
+          return this.contacts.filter((contacts) =>{
+              return contacts.name.match(this.filterUser)
+          });
+      }
+           
+         
+       
     },
 
     methods: {
@@ -205,5 +217,7 @@ const app = new Vue(
                 this.contacts[this.currentIndex].messages.push(newMessage);
             }, 1000)
         },
+
+        
     },
 });

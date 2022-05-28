@@ -39,18 +39,20 @@
                 <!-- sezione per ricerca dei contatti -->
                 <div class="contact-search">
                     <button class="search"><i class="fa-solid fa-magnifying-glass"></i></i></button>
-                    <input type="test" placeholder="Cerca o inizia una nuova chat" class="search-input">
+                    <input type="test" placeholder="Cerca o inizia una nuova chat" v-model="filterUser" @keyup="filter()" class="search-input">
                 </div>
                 <!-- elenco dei contatti -->
                 <div class="contacts-list">
-                    <div class="contact" v-for="(contact, index) in contacts" @click="currentIndex = index">
-                        <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
-                        <div class="name-contact">
-                            <h2>{{contact.name}}</h2>
-                            <span>{{getLastMessage(index)}} </span>   
+                    <template v-for="(contact, index) in filteredContacts">
+                       <div class="contact"  @click="currentIndex = index" v-show="contact.visible" >
+                            <img :src="'img/avatar' + contact.avatar + '.jpg'" class="avatar-img"/> 
+                            <div class="name-contact">
+                                <h2>{{contact.name}}</h2>
+                                <span>{{getLastMessage(index)}} </span>   
+                            </div> 
+                            <span class="hour">{{getLastMessageHour(contact)}}</span>
                         </div> 
-                        <span class="hour">{{getLastMessageHour(contact)}}</span>
-                    </div>
+                    </template>
                 </div>
             </aside>
             <!-- main container -->
